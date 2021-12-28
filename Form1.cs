@@ -39,7 +39,7 @@ namespace WordsCounterList
                 txtFileContent.Text = fileContent; 
                 
                 //Split content into Dictionary 
-                FileContent.addToDictionary(fileContent);
+                FileContent.splitIntoWords(fileContent);
 
             }
 
