@@ -34,7 +34,10 @@ namespace WordsCounterList
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtFileContent = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -80,24 +83,49 @@ namespace WordsCounterList
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(13, 155);
+            this.groupBox2.Location = new System.Drawing.Point(13, 345);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(775, 242);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Word List";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtFileContent);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox3.Location = new System.Drawing.Point(13, 157);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(775, 182);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "File Content";
+            // 
+            // txtFileContent
+            // 
+            this.txtFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtFileContent.Location = new System.Drawing.Point(10, 21);
+            this.txtFileContent.Multiline = true;
+            this.txtFileContent.Name = "txtFileContent";
+            this.txtFileContent.ReadOnly = true;
+            this.txtFileContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFileContent.Size = new System.Drawing.Size(752, 145);
+            this.txtFileContent.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 614);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Words Counter";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -109,6 +137,8 @@ namespace WordsCounterList
         private System.Windows.Forms.TextBox txtFilePath;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtFileContent;
     }
 }
 

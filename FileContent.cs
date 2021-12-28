@@ -12,7 +12,7 @@ namespace WordsCounterList
         public Dictionary<string, int> wordsCollection = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
 
 
-        public static void readFile(OpenFileDialog file)
+        public static void addToDictionary(string fileContent)
         {
 
         }

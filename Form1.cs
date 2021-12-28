@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,12 +26,20 @@ namespace WordsCounterList
         {
             OpenFileDialog openFile = new OpenFileDialog();
 
-            //Only txt file is available 
+            //Available only txt file
             openFile.Filter = "txt files (*.txt)|*.txt";
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 txtFilePath.Text = (openFile.FileName);
+
+                //Read File content 
+                txtFilePath.Text = (openFile.FileName);
+                string fileContent = File.ReadAllText(openFile.FileName);
+                txtFileContent.Text = fileContent; 
+                
+                //Split content into Dictionary 
+                FileContent.addToDictionary(fileContent);
 
             }
 
