@@ -36,8 +36,13 @@ namespace WordsCounterList
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtFileContent = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColFrequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,9 +88,11 @@ namespace WordsCounterList
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(13, 345);
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox2.Location = new System.Drawing.Point(140, 360);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(775, 242);
+            this.groupBox2.Size = new System.Drawing.Size(513, 379);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Word List";
@@ -112,11 +119,40 @@ namespace WordsCounterList
             this.txtFileContent.Size = new System.Drawing.Size(752, 145);
             this.txtFileContent.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColFrequency,
+            this.ColWord});
+            this.dataGridView1.Location = new System.Drawing.Point(22, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(475, 343);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // ColFrequency
+            // 
+            this.ColFrequency.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColFrequency.HeaderText = "Frequency";
+            this.ColFrequency.MinimumWidth = 6;
+            this.ColFrequency.Name = "ColFrequency";
+            this.ColFrequency.ReadOnly = true;
+            // 
+            // ColWord
+            // 
+            this.ColWord.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColWord.HeaderText = "Word";
+            this.ColWord.MinimumWidth = 6;
+            this.ColWord.Name = "ColWord";
+            this.ColWord.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 614);
+            this.ClientSize = new System.Drawing.Size(802, 751);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -124,8 +160,10 @@ namespace WordsCounterList
             this.Text = "Words Counter";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,6 +177,9 @@ namespace WordsCounterList
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtFileContent;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFrequency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColWord;
     }
 }
 

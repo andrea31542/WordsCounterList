@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +23,12 @@ namespace WordsCounterList
         //{
         //}
 
+        public ConcurrentDictionary<string, int> wordsCollection = new ConcurrentDictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
+
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+
             OpenFileDialog openFile = new OpenFileDialog();
 
             //Available only txt file
@@ -31,6 +36,7 @@ namespace WordsCounterList
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
+                //Console.WriteLine(wordsCollection.Keys.Count);
                 txtFilePath.Text = (openFile.FileName);
 
                 //Read File content 
@@ -39,8 +45,11 @@ namespace WordsCounterList
                 txtFileContent.Text = fileContent; 
                 
                 //Split content into Dictionary 
-                FileContent.splitIntoWords(fileContent);
-
+                IOrderedEnumerable<KeyValuePair<string, int>> frequencyWordList = FileContent.splitIntoWords(wordsCollection, fileContent);
+                foreach (var ele in frequencyWordList)
+                {
+                    dataGridView1.Rows.Add(ele.Key, ele.Value);
+                }
             }
 
         }

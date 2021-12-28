@@ -12,11 +12,10 @@ namespace WordsCounterList
 {
     class FileContent
     {
-        public static ConcurrentDictionary<string, int> wordsCollection = new ConcurrentDictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
-       
-        public static IOrderedEnumerable<KeyValuePair<string, int>> splitIntoWords(string text)
+        
+        public static IOrderedEnumerable<KeyValuePair<string, int>> splitIntoWords(ConcurrentDictionary<string, int> wordsCollection, string text)
         {
-            var list = Regex.Split(text, "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
+            var list = Regex.Split(text , "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
 
             Parallel.ForEach(list, word =>
             {
@@ -27,11 +26,21 @@ namespace WordsCounterList
                 else
                 {
                     wordsCollection.AddOrUpdate(word, 1,
-                        (key, value) => value++);
+                        (key, value) => value + 1);
                 }
             });
 
-            return null;
+            return orderDictionaryWords(wordsCollection);
+        }
+
+        public static IOrderedEnumerable<KeyValuePair<string, int>> 
+            orderDictionaryWords(ConcurrentDictionary<string, int> wordsCollection)
+        {
+            IOrderedEnumerable<KeyValuePair<string, int>> items = from pair in wordsCollection
+                orderby pair.Value descending
+                select pair;
+
+            return items;
         }
 
     }
