@@ -29,20 +29,21 @@ namespace WordsCounterList
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtFileContent = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColFrequency = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColWord = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtFileContent = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -57,11 +58,16 @@ namespace WordsCounterList
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.txtFilePath);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 39);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.Location = new System.Drawing.Point(56, 43);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(775, 90);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -78,53 +84,37 @@ namespace WordsCounterList
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(644, 32);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button1.Location = new System.Drawing.Point(635, 23);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 26);
+            this.button1.Size = new System.Drawing.Size(118, 38);
             this.button1.TabIndex = 2;
             this.button1.Text = "Select";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox2.Location = new System.Drawing.Point(140, 360);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox2.Location = new System.Drawing.Point(178, 311);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(513, 379);
+            this.groupBox2.Size = new System.Drawing.Size(513, 437);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Word List";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txtFileContent);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 157);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(775, 182);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "File Content";
-            // 
-            // txtFileContent
-            // 
-            this.txtFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtFileContent.Location = new System.Drawing.Point(10, 21);
-            this.txtFileContent.Multiline = true;
-            this.txtFileContent.Name = "txtFileContent";
-            this.txtFileContent.ReadOnly = true;
-            this.txtFileContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtFileContent.Size = new System.Drawing.Size(752, 145);
-            this.txtFileContent.TabIndex = 0;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColFrequency,
             this.ColWord});
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
             this.dataGridView1.Location = new System.Drawing.Point(22, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -148,11 +138,35 @@ namespace WordsCounterList
             this.ColWord.Name = "ColWord";
             this.ColWord.ReadOnly = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.txtFileContent);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox3.Location = new System.Drawing.Point(56, 164);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(775, 141);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "File Content";
+            // 
+            // txtFileContent
+            // 
+            this.txtFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtFileContent.Location = new System.Drawing.Point(10, 25);
+            this.txtFileContent.Multiline = true;
+            this.txtFileContent.Name = "txtFileContent";
+            this.txtFileContent.ReadOnly = true;
+            this.txtFileContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFileContent.Size = new System.Drawing.Size(752, 103);
+            this.txtFileContent.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 751);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(880, 756);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -161,9 +175,9 @@ namespace WordsCounterList
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

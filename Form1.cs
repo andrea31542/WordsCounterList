@@ -19,10 +19,6 @@ namespace WordsCounterList
             InitializeComponent();
         }
 
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-        //}
-
         public ConcurrentDictionary<string, int> wordsCollection = new ConcurrentDictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
 
         private void button1_Click(object sender, EventArgs e)
