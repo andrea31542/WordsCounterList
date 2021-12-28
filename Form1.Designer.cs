@@ -31,7 +31,7 @@ namespace WordsCounterList
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -49,7 +49,7 @@ namespace WordsCounterList
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtFilePath);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 39);
@@ -59,14 +59,14 @@ namespace WordsCounterList
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select file";
             // 
-            // textBox1
+            // txtFilePath
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(95, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(519, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtFilePath.Location = new System.Drawing.Point(95, 32);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
+            this.txtFilePath.Size = new System.Drawing.Size(519, 26);
+            this.txtFilePath.TabIndex = 2;
             // 
             // button1
             // 
@@ -76,6 +76,7 @@ namespace WordsCounterList
             this.button1.TabIndex = 2;
             this.button1.Text = "Select";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
@@ -95,7 +96,6 @@ namespace WordsCounterList
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Words Counter";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,7 +106,7 @@ namespace WordsCounterList
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFilePath;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
     }
