@@ -17,6 +17,8 @@ namespace WordsCounterList
         {
             var list = Regex.Split(text , "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
 
+            
+
             Parallel.ForEach(list, word =>
             {
                 if (wordsCollection == null)
