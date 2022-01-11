@@ -82,12 +82,14 @@ namespace WordsCounterList
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.AutoSize = true;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.Location = new System.Drawing.Point(195, 302);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(591, 420);
+            this.groupBox2.Size = new System.Drawing.Size(591, 485);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Word List";
@@ -105,12 +107,12 @@ namespace WordsCounterList
             this.ColFrequency,
             this.ColWord});
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 441);
             this.dataGridView1.TabIndex = 0;
             // 
             // ColFrequency
@@ -131,7 +133,9 @@ namespace WordsCounterList
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox3.Controls.Add(this.txtFileContent);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox3.Location = new System.Drawing.Point(23, 116);
