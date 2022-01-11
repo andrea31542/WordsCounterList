@@ -33,7 +33,7 @@ namespace WordsCounterList
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 //Console.WriteLine(wordsCollection.Keys.Count);
-                txtFilePath.Text = (openFile.FileName);
+                //txtFilePath.Text = (openFile.FileName);
 
                 //Read File content 
                 txtFilePath.Text = (openFile.FileName);
