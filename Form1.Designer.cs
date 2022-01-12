@@ -40,10 +40,12 @@ namespace WordsCounterList
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtFileContent = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +53,7 @@ namespace WordsCounterList
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(30, 27);
+            this.label1.Location = new System.Drawing.Point(43, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 18);
             this.label1.TabIndex = 0;
@@ -61,7 +63,7 @@ namespace WordsCounterList
             // 
             this.txtFilePath.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtFilePath.Location = new System.Drawing.Point(118, 23);
+            this.txtFilePath.Location = new System.Drawing.Point(131, 10);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.ReadOnly = true;
             this.txtFilePath.Size = new System.Drawing.Size(616, 26);
@@ -72,7 +74,7 @@ namespace WordsCounterList
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(768, 18);
+            this.button1.Location = new System.Drawing.Point(781, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 38);
             this.button1.TabIndex = 2;
@@ -82,14 +84,16 @@ namespace WordsCounterList
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox2.Location = new System.Drawing.Point(195, 302);
+            this.groupBox2.Location = new System.Drawing.Point(208, 285);
+            this.groupBox2.MaximumSize = new System.Drawing.Size(700, 800);
+            this.groupBox2.MinimumSize = new System.Drawing.Size(550, 415);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(591, 485);
+            this.groupBox2.Size = new System.Drawing.Size(550, 491);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Word List";
@@ -107,12 +111,12 @@ namespace WordsCounterList
             this.ColFrequency,
             this.ColWord});
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 21);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 441);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 469);
             this.dataGridView1.TabIndex = 0;
             // 
             // ColFrequency
@@ -138,9 +142,9 @@ namespace WordsCounterList
             this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox3.Controls.Add(this.txtFileContent);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox3.Location = new System.Drawing.Point(23, 116);
+            this.groupBox3.Location = new System.Drawing.Point(3, 84);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(934, 180);
+            this.groupBox3.Size = new System.Drawing.Size(961, 180);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "File Content";
@@ -154,7 +158,7 @@ namespace WordsCounterList
             this.txtFileContent.Name = "txtFileContent";
             this.txtFileContent.ReadOnly = true;
             this.txtFileContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtFileContent.Size = new System.Drawing.Size(922, 148);
+            this.txtFileContent.Size = new System.Drawing.Size(949, 148);
             this.txtFileContent.TabIndex = 0;
             // 
             // panel1
@@ -166,11 +170,33 @@ namespace WordsCounterList
             this.panel1.Controls.Add(this.txtFilePath);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 10);
+            this.panel1.Location = new System.Drawing.Point(3, 8);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 20, 10, 0);
-            this.panel1.Size = new System.Drawing.Size(934, 77);
+            this.panel1.Size = new System.Drawing.Size(961, 50);
             this.panel1.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.69792F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.30209F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 496F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(967, 779);
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
             // Form1
             // 
@@ -180,10 +206,9 @@ namespace WordsCounterList
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(982, 803);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(1500, 1024);
             this.MinimumSize = new System.Drawing.Size(1000, 850);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -194,6 +219,8 @@ namespace WordsCounterList
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +238,7 @@ namespace WordsCounterList
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFrequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColWord;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
