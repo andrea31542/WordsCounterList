@@ -12,12 +12,13 @@ namespace WordsCounterList
 {
     class FileContent
     {
-        
-        public static IOrderedEnumerable<KeyValuePair<string, int>> splitIntoWords(ConcurrentDictionary<string, int> wordsCollection, string text)
-        {
-            var list = Regex.Split(text , "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
+        public static LoadingWindow load = new LoadingWindow();
 
+        public static List<KeyValuePair<string, int>> splitIntoWords(ConcurrentDictionary<string, int> wordsCollection, string text)
+        {
             
+           var list = Regex.Split(text , "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
+
 
             Parallel.ForEach(list, word =>
             {
@@ -35,14 +36,13 @@ namespace WordsCounterList
             return orderDictionaryWords(wordsCollection);
         }
 
-        public static IOrderedEnumerable<KeyValuePair<string, int>> 
+        public static List<KeyValuePair<string, int>> 
             orderDictionaryWords(ConcurrentDictionary<string, int> wordsCollection)
         {
             IOrderedEnumerable<KeyValuePair<string, int>> items = from pair in wordsCollection
                 orderby pair.Value descending
                 select pair;
-
-            return items;
+            return items.ToList();
         }
 
     }

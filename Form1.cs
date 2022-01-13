@@ -19,12 +19,11 @@ namespace WordsCounterList
             InitializeComponent();
         }
 
-        public ConcurrentDictionary<string, int> wordsCollection = new ConcurrentDictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
-
+        private ConcurrentDictionary<string, int> wordsCollection = new ConcurrentDictionary<string, int>(StringComparer.InvariantCultureIgnoreCase);
+        private List<KeyValuePair<string, int>> frequencyWordList = new List<KeyValuePair<string, int>>();
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-
+            
             OpenFileDialog openFile = new OpenFileDialog();
 
             //Available only txt file
@@ -32,16 +31,27 @@ namespace WordsCounterList
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                //Console.WriteLine(wordsCollection.Keys.Count);
+                if (frequencyWordList.Count > 0 || wordsCollection.Count > 0)
+                {
+                    frequencyWordList.Clear();
+                    wordsCollection.Clear();
+                }
+
+                dataGridView1.Rows.Clear();
                 //txtFilePath.Text = (openFile.FileName);
 
                 //Read File content 
                 txtFilePath.Text = (openFile.FileName);
+
+                LoadingWindow load = new LoadingWindow();
+             
                 string fileContent = File.ReadAllText(openFile.FileName);
                 txtFileContent.Text = fileContent; 
                 
                 //Split content into Dictionary 
-                IOrderedEnumerable<KeyValuePair<string, int>> frequencyWordList = FileContent.splitIntoWords(wordsCollection, fileContent);
+                frequencyWordList = FileContent.splitIntoWords(wordsCollection, fileContent);
+                
+
                 foreach (var ele in frequencyWordList)
                 {
                     dataGridView1.Rows.Add(ele.Key, ele.Value);
