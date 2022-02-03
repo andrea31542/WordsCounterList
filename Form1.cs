@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace WordsCounterList
 {
@@ -23,7 +24,6 @@ namespace WordsCounterList
         private List<KeyValuePair<string, int>> frequencyWordList = new List<KeyValuePair<string, int>>();
         private void button1_Click(object sender, EventArgs e)
         {
-            
             OpenFileDialog openFile = new OpenFileDialog();
 
             //Available only txt file
@@ -38,24 +38,26 @@ namespace WordsCounterList
                 }
 
                 dataGridView1.Rows.Clear();
-                //txtFilePath.Text = (openFile.FileName);
 
                 //Read File content 
                 txtFilePath.Text = (openFile.FileName);
 
-                LoadingWindow load = new LoadingWindow();
-             
+                LoadingWindow load= new LoadingWindow();
+                load.ShowForm(this);
+
                 string fileContent = File.ReadAllText(openFile.FileName);
-                txtFileContent.Text = fileContent; 
-                
+                txtFileContent.Text = fileContent;
+
                 //Split content into Dictionary 
                 frequencyWordList = FileContent.splitIntoWords(wordsCollection, fileContent);
-                
+
 
                 foreach (var ele in frequencyWordList)
                 {
                     dataGridView1.Rows.Add(ele.Key, ele.Value);
                 }
+
+                load.Close();
             }
 
         }

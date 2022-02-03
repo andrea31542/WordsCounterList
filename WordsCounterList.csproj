@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{81D0AB8D-9BA8-4EAC-AABE-7F66C8726FE0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>WordsCounterList</RootNamespace>
     <AssemblyName>WordsCounterList</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -55,7 +55,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoadFunction.cs" />
     <Compile Include="LoadingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +92,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dots-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dots-loading %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-loading-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-loading-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18d33988a47f50d60ebc0c788829504c1b8e45d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\old-brown-paper-vintage-background-texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liquid-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\192-1920773_ios-11-wallpaper-4k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\henry-co--odUkx8C2gg-unsplash.jpg" />
+    <None Include="Resources\henry-co--odUkx8C2gg-unsplash1.jpg" />
+    <Content Include="Resources\itl.cat_mac-wallpaper_120955.png" />
+    <Content Include="Resources\nahil-naseer-xljtGZ2-P3Y-unsplash.jpg" />
+    <None Include="Resources\nahil-naseer-xljtGZ2-P3Y-unsplash1.jpg" />
+    <Content Include="Resources\nathan-anderson-fcZIyU-nbFE-unsplash.jpg" />
+    <None Include="Resources\nathan-anderson-fcZIyU-nbFE-unsplash1.jpg" />
+    <Content Include="Resources\pawel-czerwinski-ISgDx2aOAB8-unsplash.jpg" />
+    <None Include="Resources\pawel-czerwinski-ISgDx2aOAB8-unsplash1.jpg" />
+    <Content Include="Resources\sharon-mccutcheon-WqPAETBU2G8-unsplash.jpg" />
+    <None Include="Resources\sharon-mccutcheon-WqPAETBU2G8-unsplash1.jpg" />
+    <None Include="Resources\itl.cat_mac-wallpaper_1209551.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,9 +16,10 @@ namespace WordsCounterList
 
         public static List<KeyValuePair<string, int>> splitIntoWords(ConcurrentDictionary<string, int> wordsCollection, string text)
         {
-            
-           var list = Regex.Split(text , "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
+            StringBuilder str = new StringBuilder(text);
 
+            var list = Regex.Split(text, "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
+            list.RemoveAll(s => string.IsNullOrEmpty(s));
 
             Parallel.ForEach(list, word =>
             {
@@ -40,7 +41,8 @@ namespace WordsCounterList
             orderDictionaryWords(ConcurrentDictionary<string, int> wordsCollection)
         {
             IOrderedEnumerable<KeyValuePair<string, int>> items = from pair in wordsCollection
-                orderby pair.Value descending
+                orderby pair.Key ascending 
+                orderby pair.Value descending 
                 select pair;
             return items.ToList();
         }
