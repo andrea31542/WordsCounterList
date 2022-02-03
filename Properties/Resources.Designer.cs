@@ -63,56 +63,6 @@ namespace WordsCounterList.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _18d33988a47f50d60ebc0c788829504c1b8e45d3 {
-            get {
-                object obj = ResourceManager.GetObject("_18d33988a47f50d60ebc0c788829504c1b8e45d3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _192_1920773_ios_11_wallpaper_4k {
-            get {
-                object obj = ResourceManager.GetObject("_192_1920773_ios_11_wallpaper_4k", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap henry_co__odUkx8C2gg_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("henry-co--odUkx8C2gg-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap itl_cat_mac_wallpaper_120955 {
-            get {
-                object obj = ResourceManager.GetObject("itl.cat_mac-wallpaper_120955", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap liquid_bg {
-            get {
-                object obj = ResourceManager.GetObject("liquid_bg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap nahil_naseer_xljtGZ2_P3Y_unsplash {
             get {
                 object obj = ResourceManager.GetObject("nahil-naseer-xljtGZ2-P3Y-unsplash", resourceCulture);
@@ -136,26 +86,6 @@ namespace WordsCounterList.Properties {
         internal static System.Drawing.Bitmap old_brown_paper_vintage_background_texture {
             get {
                 object obj = ResourceManager.GetObject("old_brown_paper_vintage_background_texture", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pawel_czerwinski_ISgDx2aOAB8_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("pawel-czerwinski-ISgDx2aOAB8-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sharon_mccutcheon_WqPAETBU2G8_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("sharon-mccutcheon-WqPAETBU2G8-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
