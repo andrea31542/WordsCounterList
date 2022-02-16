@@ -20,7 +20,6 @@ namespace WordsCounterList
 
         public void ShowForm(Form f)
         {
-            //this.CenterToParent();
             this.Show(f);
             this.Refresh();
         }

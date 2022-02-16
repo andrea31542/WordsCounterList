@@ -35,9 +35,8 @@ namespace WordsCounterList
                 {
                     frequencyWordList.Clear();
                     wordsCollection.Clear();
+                    dataGridView1.Rows.Clear();
                 }
-
-                dataGridView1.Rows.Clear();
 
                 //Read File content 
                 txtFilePath.Text = (openFile.FileName);

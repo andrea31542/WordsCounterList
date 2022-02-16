@@ -12,11 +12,9 @@ namespace WordsCounterList
 {
     class FileContent
     {
-        public static LoadingWindow load = new LoadingWindow();
 
         public static List<KeyValuePair<string, int>> splitIntoWords(ConcurrentDictionary<string, int> wordsCollection, string text)
         {
-            StringBuilder str = new StringBuilder(text);
 
             var list = Regex.Split(text, "[,:$% &().?!\\s\\n\\t\\W]+").ToList();
             list.RemoveAll(s => string.IsNullOrEmpty(s));
